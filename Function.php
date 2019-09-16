@@ -41,22 +41,25 @@ if (isset($_POST['a']) and isset($_POST['b']) and isset($_POST['c']))
 <hr>
 <br>
 <h2>Время</h2>
-<form method="post">
-<p>N= <input name="N" type="text"></p>
-<p> <input type="submit" value="Найти"></p>
-</form>
 <?php
-function minute(){
+function minute($N){
     $m = $N / 60;
     echo 'Минуты: ',$m,"<br>";
 }
-function hour(){
+function hour($N){
     $h = $N / 3600;
     echo 'Часы: ', $h,"<br>";
 }
-function ms(){
-   // $v = $N /  ;
+function ms($N){
+    $v = $N % 60;
 }
-//function 
+function hms($N){
+    $chas = intdiv($N,3600);
+    $min  = floar(($N%3600)/60);
+    $sec = $N - (($chas * 3600) + ($min * 60)); 
+    return "<h3>Часы: {$chas} ,Минуты: {$min} ,Секунды: {$sec}</h3>";
+}
+$N = 4855;
+echo hms($N);
 ?>
 
