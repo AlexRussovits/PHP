@@ -55,11 +55,11 @@ function ms($N){
 }
 function hms($N){
     $chas = intdiv($N,3600);
-    $min  = floar(($N%3600)/60);
+    $min  = floor(($N%3600)/60);
     $sec = $N - (($chas * 3600) + ($min * 60)); 
     return "<h3>Часы: {$chas} ,Минуты: {$min} ,Секунды: {$sec}</h3>";
 }
 $N = 4855;
 echo hms($N);
 ?>
-
+<hr>
