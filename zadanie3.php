@@ -13,6 +13,16 @@ foreach ($predmety as $value)
 	echo "<th>".$value."</th>";
 	echo "</tr>";
 
+for ($i = 0; $i < count($name); $i++){
+	$average = 0;
+	echo "<tr> <td>".$name[$i]."</td>";
+		for ($j = 0; $j <count($otsenki[$i]); $j++) {
+			echo "<td>". $otsenki[$i][$j]."</td>";
+			$average += $otsenki[$i][$j];
+		}
+
+	echo "<td>".round($average/count($otsenki[$i]),2)."</td></tr>";
+}
 echo "</table>";
 ?>
 </body>
