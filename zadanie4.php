@@ -7,7 +7,6 @@
 <body>
 <?php
 $continent = ["Asia","Australia and Oceania", "America", "Europe", "Africa"];
-$austoce = ["Australia", "Tonga", "New Zealand", "Kiribati", "Fiji", "Papua New Guinea", "Cook Islands"];
 $Asia = array(array("Country" => "China",
 "Capital" => "Beijin",
 "Population" => "1 404 328 611 people",
@@ -169,6 +168,9 @@ array("Country" => "Cook Islands",
 "Population" => "17 459 people",
 "Area" => "236 m<sup>2</sup>"),
 );
+foreach ($continent as $value) {
+	echo '<a href = "zadanie4.php?id=',$value,'">',$value,'</a><br>';
+}
 ?>
 </body>
 </html>
