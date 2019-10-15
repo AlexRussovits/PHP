@@ -98,10 +98,26 @@ if(isset($_POST['message-button'])){
 	$date = $_POST['date'];
 	$maakond = $_POST['maakond'];
 	$land = $_POST['land'];
+	$result = 0;
 	$line = "$town|$president|$maakond|$date|$land \n";
 	echo "<br>";
 	file_put_contents('test.txt',$line,FILE_APPEND);
 
+	if($town == 'Tallinn') {
+		$result++;
+	}
+	if($president == 'Kersti Kaljulaid') {
+		$result++;
+	}
+	if ($date == '24 February 1918') {
+		$result++;
+	}
+	if($maakond == 'Harjumaa') {
+		$result++;
+	}
+	if($land == 'Petsora') {
+		$result++;
+	}
 }
 ?>
 
@@ -113,10 +129,6 @@ foreach ($file as $line) {
 }
 ?>
 
-<?php
-$file1 = ('resultat.txt');
-
-?>
 </body>
 </html>
 
