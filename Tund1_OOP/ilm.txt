@@ -1,0 +1,8 @@
+Öö|Teisipäev|3..5|sneg.PNG| Muutliku pilvisusega ilm. Ajuti on vihma- ja lörtsihoogusid. Puhub põhja- ja loodetuul 4-10, saarte rannikul iiliti 14 m/s. Õhutemperatuur on -3..+2, saarte rannikul kuni +5°C.
+Päev|Teisipäev|1..5|Snow.PNG| Muutliku pilvisusega ilm. Ajuti sajab vihma, lörtsi ja lund. Puhub põhja- ja loodetuul 6-11, rannikul puhanguti 15 m/s. Õhutemperatuur on 1..5°C, õhtu poole langeb sisemaal miinuspoolele.
+Öö|Kolmapäev|-6..4|Snow.PNG| Muutliku pilvisusega ilm. Kohati sajab lund, lörtsi, rannikul ka vihma. Puhub loodetuul 4-10, rannikul puhanguti 15 m/s, hommikuks nõrgeneb. Õhutemperatuur on -1..-6, rannikul kuni +4°C.
+Päev|Kolmapäev|0..5|Snow.PNG| Muutliku pilvisusega ilm. Kohati sajab lund, lörtsi, rannikul ka vihma. Puhub läänekaare tuul 2-8 m/s. Õhutemperatuur on 0..+5°C.
+Öö|Neljapäev|-6..3|Snow.PNG| Muutliku pilvisusega ilm. Kohati sajab lund, lörtsi, rannikul ka vihma. Edela- ja läänetuul tugevneb 5-11, rannikul puhanguti 15 m/s. Õhutemperatuur on -3..+3, enne keskööd kohati kuni -6°C.
+Päev|Neljapäev|3..8|Rainy.PNG| Pilves selgimistega ilm. Mitmel pool sajab vihma ja lörtsi. Puhub edela- ja läänetuul 5-11, rannikul puhanguti 15 m/s, pärastlõunal pöördub loodesse ja nõrgeneb. Õhutemperatuur on 3..8°C.
+Öö|Reede|-2..7|sneg.PNG| Pilves selgimistega ilm. Öö hakul sajab mitmel pool vihma ja lörtsi, hommikuks sadu lakkab. Puhub loode- ja põhjatuul 2-8 m/s. Õhutemperatuur on -2..+4, saarte rannikul kuni +7°C.
+Päev|Reede|2..7|Sunny.PNG|  Pilves selgimistega olulise sajuta ilm. Puhub muutliku suunaga tuul 1-7 m/s. Õhutemperatuur on 2..7°C.
