@@ -1,15 +1,11 @@
 <?php
-class Category {
-
+class Category
+ {
     public static function getAllCategory() {
-        $query = "SELECT * FROM category";
+        $query = "SELECT * FROM categoria";
         $db = new Database();
         $arr = $db->getAll($query);
         return $arr;
-    }
-
-    public static function getSport() {
-        
     }
 }
 ?>

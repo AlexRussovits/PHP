@@ -9,8 +9,8 @@ class database {
     function__construct() {
         $this->host = 'localhost';
         $this->user = 'root';
-        $this->password = 'crucial';
-        $this->baseName = 'newsportal';
+        $this->password = '';
+        $this->baseName = 'crucial';
         $this->connect();
     }
 
@@ -37,6 +37,33 @@ class database {
             $this->conn = null;
         }
     }
+
+    function getOne($query) {
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $response = $stmt->fetch();
+        return $response;
+    }
+
+    function getAll($query) {
+        $stmlt = $this->conn->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $response = $stmt->fetchAll();
+        return $response;
+    }
+
+    function executeRun($query) {
+        $response = $this->conn->exec($query);
+        return $response;
+    }
+
+    function getLastId() {
+        $lastId = $this->conn->lastInsertId();
+        return $lastId;
+    }
 }
+
 
 ?>
