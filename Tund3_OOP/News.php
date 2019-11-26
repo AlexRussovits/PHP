@@ -1,3 +1,4 @@
+
 <?php
 class News {
     protected $arr;
@@ -20,4 +21,4 @@ class News {
         return $this->arr;
     }
 }
-?>
+?> 
