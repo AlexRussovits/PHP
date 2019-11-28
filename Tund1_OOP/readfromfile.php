@@ -24,7 +24,7 @@ public static function createLinks()
     $cats=self::readtxt(); // self - для вызова статических данных в классе
     foreach ($cats as $c)
     {
-        echo '<a href="index.php?id='.$c->getId().'">'.$c->getNimetus().'</a> <br>';
+        echo '<a href="index.php.php?id='.$c->getId().'">'.$c->getNimetus().'</a> <br>';
     }
 }
 

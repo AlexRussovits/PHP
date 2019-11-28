@@ -6,7 +6,7 @@ class database {
     private $password;
     private $baseName;
 
-    function__construct() {
+    function __construct() {
         $this->host = 'localhost';
         $this->user = 'root';
         $this->password = '';
@@ -14,13 +14,13 @@ class database {
         $this->connect();
     }
 
-    function__destruct {
+    function __destruct() {
         $this->disconnect();
     }
 
     function connect() {
         try {
-            $this conn = new PDO(
+            $this->conn = new PDO(
                 'mysql:host='.$this->host.''
                 .';dbname='.$this->baseName.'',
                 $this->user,
@@ -47,7 +47,7 @@ class database {
     }
 
     function getAll($query) {
-        $stmlt = $this->conn->prepare($query);
+        $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $response = $stmt->fetchAll();

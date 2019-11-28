@@ -232,7 +232,7 @@
         _.$slideTrack.append(_.$slides);
 
         _.$slides.each(function(index, element) {
-            $(element).attr('data-slick-index', index);
+            $(element).attr('data-slick-index.php', index);
         });
 
         _.$slidesCache = _.$slides;
@@ -512,7 +512,7 @@
 
         _.$slides.each(function(index, element) {
             $(element)
-                .attr('data-slick-index', index)
+                .attr('data-slick-index.php', index)
                 .data('originalStyling', $(element).attr('style') || '');
         });
 
@@ -879,7 +879,7 @@
             _.$slides
                 .removeClass('slick-slide slick-active slick-center slick-visible slick-current')
                 .removeAttr('aria-hidden')
-                .removeAttr('data-slick-index')
+                .removeAttr('data-slick-index.php')
                 .each(function(){
                     $(this).attr('style', $(this).data('originalStyling'));
                 });
@@ -1213,7 +1213,7 @@
                 }
             });
 
-            slidesTraversed = Math.abs($(swipedSlide).attr('data-slick-index') - _.currentSlide) || 1;
+            slidesTraversed = Math.abs($(swipedSlide).attr('data-slick-index.php') - _.currentSlide) || 1;
 
             return slidesTraversed;
 
@@ -1710,7 +1710,7 @@
         lastVisibleIndex = _.slideCount - _.options.slidesToShow;
 
         // in non-infinite sliders, we don't want to go past the
-        // last visible index.
+        // last visible index.php.
         if( !_.options.infinite && ( _.currentSlide > lastVisibleIndex )) {
             _.currentSlide = lastVisibleIndex;
         }
@@ -2301,13 +2301,13 @@
                         infiniteCount); i -= 1) {
                     slideIndex = i - 1;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
-                        .attr('data-slick-index', slideIndex - _.slideCount)
+                        .attr('data-slick-index.php', slideIndex - _.slideCount)
                         .prependTo(_.$slideTrack).addClass('slick-cloned');
                 }
                 for (i = 0; i < infiniteCount; i += 1) {
                     slideIndex = i;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
-                        .attr('data-slick-index', slideIndex + _.slideCount)
+                        .attr('data-slick-index.php', slideIndex + _.slideCount)
                         .appendTo(_.$slideTrack).addClass('slick-cloned');
                 }
                 _.$slideTrack.find('.slick-cloned').find('[id]').each(function() {
@@ -2340,7 +2340,7 @@
                 $(event.target) :
                 $(event.target).parents('.slick-slide');
 
-        var index = parseInt(targetElement.attr('data-slick-index'));
+        var index = parseInt(targetElement.attr('data-slick-index.php'));
 
         if (!index) index = 0;
 

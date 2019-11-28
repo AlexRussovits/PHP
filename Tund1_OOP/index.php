@@ -11,7 +11,7 @@ if (isset($_GET['id']))
 echo "Данные из MySQL <br>";
 $cats= DBMySQL::getAllCategorias();
 foreach($cats as $c) {
-    echo '<a href ="index.php?iddb='.$c->getId().'">'.$c->getNimetus().'</a> <br>';
+    echo '<a href ="index.php.php?iddb='.$c->getId().'">'.$c->getNimetus().'</a> <br>';
 }
 
 if (isset($_GET['iddb'])) {

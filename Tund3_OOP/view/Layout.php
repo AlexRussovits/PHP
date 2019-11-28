@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
 <!-- ICON CSS -->
-<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../js/font-awesome/css/font-awesome.min.css">
 
 <!-- CSS -->
-<link rel="stylesheet" href="js/bootstrap/bootstrap.min.css">
-<link rel="stylesheet" href="js/slick/slick.css">
-<link rel="stylesheet" href="css/animate.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../js/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="../js/slick/slick.css">
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="stylesheet" href="../css/style.css">
 
 <!-- MODERNIZR -->
- <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+ <script src="../js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <title>Сrucial</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
                 </div>
                 
                 <?php
-
+            
 
                 ?>
                 
@@ -43,17 +43,17 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="layout.php"><img src="img/logo.png" class="img-responsive" alt=""/></a>
+					<a class="navbar-brand" href="layout.php"><img src="../img/logo.png" class="img-responsive" alt=""/></a>
 				</div>				
 
 				<div class="navbar-social">
-					<a href="https://www.facebook.com/" ><img src="img/icon/3.png" class="img-responsive" alt=""/></a>
-					<a href="https://twitter.com"><img src="img/icon/4.png" class="img-responsive" alt=""/></a>
-					<a href="https://www.instagram.com/"><img src="img/icon/5.png" class="img-responsive" alt=""/></a>
+					<a href="https://www.facebook.com/" ><img src="../img/icon/3.png" class="img-responsive" alt=""/></a>
+					<a href="https://twitter.com"><img src="../img/icon/4.png" class="img-responsive" alt=""/></a>
+					<a href="https://www.instagram.com/"><img src="../img/icon/5.png" class="img-responsive" alt=""/></a>
 				</div>
 
 				<div class="navbar-brand hidden-xs">
-					<a href="#"><img src="img/logo2.png" class="img-responsive" alt=""/></a>
+					<a href="#"><img src="../img/logo2.png" class="img-responsive" alt=""/></a>
 				</div>
 				
 				<div class="search-trigger pull-right"></div>
@@ -90,10 +90,10 @@
 
 ?>   
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/slick/slick.min.js"></script>
-<script src="js/theme.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+<script src="../js/slick/slick.min.js"></script>
+<script src="../js/theme.js"></script>
 
 </body>
 </html>
