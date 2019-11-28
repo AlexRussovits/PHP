@@ -12,6 +12,11 @@ class Controller {
     public static function error404() {
         include_once 'view/error404.php';
     }
+
+    public static function AllNews() {
+        $arr = News::getAllNews();
+        include_once 'view/AllNews.php';
+    }
 }
 
 ?>
