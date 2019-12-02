@@ -1,12 +1,10 @@
 <?php
 ob_start();
-?>
+foreach($arrayData as $key => $value) {
 
-<h1>Start page</h1>
-<br>
 
-<?php
+}
+
 $content = ob_get_clean();
 include_once  'view/Layout.php';
-
 ?>
