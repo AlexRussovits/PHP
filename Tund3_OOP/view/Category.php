@@ -1,7 +1,7 @@
 <?php
-echo "<li class = 'submenu'><a href = 'Главная'>Главная</a></li></ br>";
+echo "<li class = 'dropdown'><a href = 'All'>All</a></li></ br>";
 foreach($arr as $value) {
-    echo "<li class = 'submenu'><a href = 'categoria?id=".$value['id']."'>".$value['Name'].'</a></li></ br>';
+    echo "<li class = 'dropdown'><a href = 'categoria?id=".$value['id']."'>".$value['Name'].'</a></li></ br>';
 }
 ?>
 
