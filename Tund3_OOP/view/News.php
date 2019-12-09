@@ -22,9 +22,11 @@ class ViewNews
 
     public static function ReadNews($n) {
         echo "<h2>".$n['Title']."</h2>";
-        echo '<img src="image/'.$value['picture'].'"><br>';
+        echo '<img src="image/'.$n['picture'].'" style = "width: 800px; height: 400px;"><br>';
        // echo '<br><img src="data:image/jpeg;base64,'.base64_encode($n ['picture']).'"><br>';
         echo "<p>".$n['Description']."</p>";
     }
 
 }
+
+?>

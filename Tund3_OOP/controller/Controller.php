@@ -26,6 +26,7 @@ class Controller {
     }
     public static function NewsByID($id) {
         $n = News::getNewsByID($id);
+        //print_r($n);
         include_once 'view/ReadNews.php';
     }
 
