@@ -6,6 +6,7 @@ ob_start();
 <br>
 
 <?php
+//print_r($arr);
 ViewNews::NewsByCategory($arr);
 
 $content = ob_get_clean();

@@ -5,7 +5,7 @@ class Database
     private $user;
     private $password;
     private $baseName;
-    private $connect;
+    private $conn;
     public function __construct()
     {
         $this->host = 'localhost';
@@ -17,18 +17,44 @@ class Database
     public function __destruct(){
         $this->disconnect();
     }
-    public function connect(){
-        $this->connect = mysqli_connect($this->host, $this->user, $this->password, $this->baseName);
-    }
-    public function disconnect(){
-        mysqli_close($this->connect);
-    }
-    public function getAll($query){
-        $query = mysqli_query($this->connect,$query);
-        $arr = [];
-        while ($result = mysqli_fetch_assoc($query)){
-            $arr[] = $result;
+
+    function connect() {
+        if(!$this->conn) {
+            try {
+                $this->conn = new PDO('mysql:host='.$this->host.';dbname='.$this->baseName.'',$this->user,$this->password,
+                array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+            }
+            catch(Exception $e) {
+                die ('Connection failed : '. $e->getMessage());
+            }
         }
-        return $arr;
+        return $this->conn;
+    }
+
+    function disconnect(){
+        if($this->conn) {
+            $this->conn = null;
+        }
+    }
+
+    function getOne($query) {
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $response = $stmt->fetch();
+        return $response;
+    }
+
+    function getAll($query){
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $response = $stmt->fetchAll();
+        return $response;
+    }
+    function executeRun($query) {
+        $response = $this->conn->exec($query);
+        return $response;
     }
 }
+?>

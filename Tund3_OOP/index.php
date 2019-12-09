@@ -4,8 +4,9 @@ include_once 'inc/Database.php'; // класс для работы с базой
 require 'model/Category.php'; // подключаем нужные модели
 require 'model/News.php';
 
-include_once 'view/News.php';
+
 include_once 'controller/Controller.php'; // контроллер
+include 'view/News.php';
 include_once 'route/routing.php'; // маршрутизатор
 
 echo $response;

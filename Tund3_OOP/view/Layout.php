@@ -64,9 +64,43 @@
 
             </div>
         </nav>
-        
+
     </header>
 </div>
+
+<div class="nav-white">
+	<div class="container">
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown dropdown-v1">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Category<span class="fa fa-angle-down"></span></a>						
+							<ul class="submenu">
+                                <?php
+                                Controller::AllCategory();                                
+                                ?>
+							</ul>
+						</li>																
+				</li>
+			</ul>
+        
+        </div>	
+	</div>
+</div>
+<section>
+    <div class= 'divBox'>
+        <?php
+            if(isset($content)) {
+                echo $content;
+            } else{
+                echo '<h1>Content is gone!</h1>';
+            }
+        ?>
+    </div>
+</section>
+
+
+
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>

@@ -1,7 +1,7 @@
 <?php
 class Controller {
     public static function StartSite() {
-        $arr = News::getLast10News();
+        $arr = News::getLast10News();//news list
         include_once 'view/start.php';
     }
     public static function AllCategory() {
