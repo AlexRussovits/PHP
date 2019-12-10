@@ -11,6 +11,10 @@ class Controller {
     public static function error404() {
         include_once 'view/error404.php';
     }
+    public static function InsertComment($c,$id) {
+        Comments::InsertComment($c,$id);
+        header('Location:news?id='.$id.'#ctable');
+    }
     public static function AllNews(){
         $arr = News::getAllNews();
         include_once 'view/AllNews.php';
@@ -28,6 +32,22 @@ class Controller {
         $n = News::getNewsByID($id);
         //print_r($n);
         include_once 'view/ReadNews.php';
+    }
+
+    public static function Comments($postid) {
+        $arrayComment = Comments::getCommentsByNewsID($postid);
+print_r($arrayComment);
+      ViewComments::CommentsByNews($arrayComment);
+
+    }
+
+    public static function CommentsCount($postid) {
+        $arr = Comments::getCommentsCountByNewsID($postid);
+        ViewComments::CommentsCount($arr);
+    }
+    public static function CommentsCountWithAncor($postid) {
+        $arr = Comments::getCommentsCountByNewsID($postid);
+        ViewComments::CommentsCountWithAncor($arr);
     }
 
 }

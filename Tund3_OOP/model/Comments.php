@@ -1,8 +1,15 @@
 <?php
 class Comments
 {
-    public static function insertComment($c,$id)
-    {
+    public static function InsertComment($c,$id) {
+       // $query = "INSERT INTO 'comments' (id, `fname`, `lname`, text, date, post_id) VALUES (NULL, '', '', '$c', CURRENT_STAMP,'$id')";
+       $query = "INSERT INTO `comments` (`id`, `fname`, `lname`, `text`, `date`, `post_id`) VALUES (NULL, '', '', '$c', CURRENT_STAMP, '$id')";
+        $db = new Database();
+        $q = $db -> executeRun($query);
+        return $q;
+
+    }
+
         public static function getCommentsByNewsID($id) {
         $query = "SELECT * FROM comments WHERE post_id =".$id." ORDER BY id DESC";
         $db = new Database();
@@ -16,7 +23,6 @@ class Comments
         $c = $db->getOne($query);
         return $c;
         }
-    }
 
 }
 
