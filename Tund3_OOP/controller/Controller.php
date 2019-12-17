@@ -36,7 +36,7 @@ class Controller {
 
     public static function Comments($postid) {
         $arrayComment = Comments::getCommentsByNewsID($postid);
-print_r($arrayComment);
+//print_r($arrayComment);
       ViewComments::CommentsByNews($arrayComment);
 
     }

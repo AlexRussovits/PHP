@@ -11,7 +11,7 @@ class ViewComments {
         if (!empty($arrayComment)) {
             echo '<table id = "ctable"><th>Комментарий</th><th>Дата комментария</th>';
             foreach ($arrayComment as $value) {
-               echo '<tr><td>'.$value.['text'].'</td><td>'.$value['date'].'</td></tr>';
+               echo '<tr><td>'.$value['text'].'</td><td>'.$value['date'].'</td></tr>';
             }
             echo '</table>';
         }
