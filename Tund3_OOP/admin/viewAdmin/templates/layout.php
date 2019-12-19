@@ -11,23 +11,45 @@
 </head>
 <body>
     <div class="container">  
-<!-- -->          
-			<div class="header clearfix">
-            <nav class="navbar navbar-default">
-			<div class="container-fluid">          
-<!-- Menu -->
+<!-- -->
+        <?php
+            if(isset($_SESSION['userID']) && isset($_SESSION['session_id'])) {
 
-                <?php
-                    echo '<h4><a href="../" target="_blank">Crucial</a>';
-                    echo ' &#187 <a href="categoryAdmin">News Category</a>';
-                    echo ' &#187 <a href="newsAdmin">News List</a>';
-                    echo '</h4>';
+
                 ?>
 
-		</div>
-		</nav>
-		</div>		
-<!-- --> 
+
+                <div class="header clearfix">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <!-- Menu -->
+
+                            <?php
+                                echo '<ul class = "nav nav-pills pull-right">
+                                       <li role="button">'.$_SESSION["username"].
+                                       '<a href="logout" style="display: inline;">
+                                       Выйти
+                                        <i class="fa fa-sign-out"></i>
+                                        </a> 
+                                        </li>
+                                        </ul>';
+                                if(isset($_SESSION["status"]) && isset($_SESSION["status"]) == "Admin") {
+                                    echo '<h4><a href="../" target="_blank">Crucial</a>';
+                                    echo ' &#187 <a href="categoryAdmin">News Category</a>';
+                                    echo ' &#187 <a href="newsAdmin">News List</a>';
+                                    echo '</h4>';
+                                } else{
+                                    echo '<h4>У вас нет прав!</h4>';
+                                }
+                            ?>
+
+                        </div>
+                    </nav>
+                </div>
+                <!-- -->
+                <?php
+            }
+        ?>
 		<div id="content" style="padding-top:20px; ">
 
             <?php
