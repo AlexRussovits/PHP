@@ -3,19 +3,24 @@
 class modelAdmin
 {
     public static function userAuth() {
+
         if(isset($_SESSION['userID'])){
             $logIn=true;
         }else{
+
             $logIn = false;
             if(isset($_POST['btnLogin'])) {
-                if(isset($_POST['email']) && isset($_POST['password']) && $_POST['email'] != "" && !empty($POST['password'])){
-                    $email =filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
-                    $password = $_POST['password'];
-                    $sql = "SELECT * FROM users WHERE email = '$email'";
+
+                if(isset($_POST['Email']) && isset($_POST['Password']) && $_POST['Email'] != "" && !empty($_POST['Password'])){
+                   // print_r("Hello! aa");
+                    $email =filter_input(INPUT_POST,'Email',FILTER_VALIDATE_EMAIL);
+                    $password = $_POST['Password'];
+                    $sql = "SELECT * FROM users WHERE Email = '$email'";
                     $db = new Database();
-                    $item = $db-getOne($sql);
+                    $item = $db->getOne($sql);
+                  //  print_r($item);
                     if ($item) {
-                        if (password_verify($password,$item['password'])) {
+                        if (password_verify($password,$item['Password'])) {
                             $_SESSION['userID'] = $item['id'];
                             $_SESSION['username'] = $item['username'];
                             $_SESSION['status'] = $item['status'];

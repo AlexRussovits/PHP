@@ -59,7 +59,7 @@
 
                 <div class="search-trigger pull-right"></div>
 
-                <div class="login pull-right"></div>
+                <a href="registerForm"><div class="login pull-right"></div></a>
 
 
             </div>
@@ -82,7 +82,6 @@
 						</li>																
 				</li>
 			</ul>
-        
         </div>	
 	</div>
 </div>

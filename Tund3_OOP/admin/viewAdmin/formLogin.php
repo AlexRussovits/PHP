@@ -27,10 +27,10 @@
                     <form accept-charset="UTF-8" role="form" action="login" method="POST">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="E-mail" name="email" type="text" required autofocus>
+                                <input class="form-control" placeholder="E-mail" name="Email" type="text" required autofocus>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Password" name="password" type="password" value="" required>
+                                <input class="form-control" placeholder="Password" name="Password" type="Password" value="" required>
                             </div>
                             <div class="checkbox">
                                 <label>
