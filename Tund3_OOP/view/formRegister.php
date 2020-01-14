@@ -21,7 +21,7 @@
                 <div class="col-md-6">
 
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name *" value="" name="name" required/>
+                        <input type="text" class="form-control" placeholder="Your Name *" value="" name="name" required autofocus/>
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" placeholder="Email" value="" name="email" required/>
