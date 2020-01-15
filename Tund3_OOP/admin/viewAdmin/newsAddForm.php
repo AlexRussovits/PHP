@@ -47,10 +47,13 @@ ob_start();
                 </td>
             </tr>
 
-            <td>Picture</td>
-            <td><div>
-                    <input type=file name="picture" style="color: black;" required>
-                </div></td>
+            <tr>
+                <td>Picture</td>
+                    <td><div>
+                        <input type=file name="picture" style="color: black;" required>
+                    </div></td>
+            </tr>
+
             <tr>
                 <td colspan="2">
                     <button type="submit" class="btn btn-primary" name="save">

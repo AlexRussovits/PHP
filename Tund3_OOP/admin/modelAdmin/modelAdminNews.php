@@ -33,7 +33,7 @@ class modelAdminNews
                 }
 
 
-                $sql = "INSERT INTO `news`(`id`, `Title`, `Date`, `Category_id`, `picture`, `Description`, `User_id`) VALUES (NULL, `$title`, `$descr`, `$cat_id`, `$date`, `$image`, '51')";
+                $sql = "INSERT INTO `news`(`id`, `Title`, `Date`, `Category_id`, `picture`, `Description`, `User_id`) VALUES (NULL, '$title','$date', '$cat_id','$image', '$descr', '51')";
                 $db = new Database();
                 $item = $db->executeRun($sql);
                 if($item ==true) {
