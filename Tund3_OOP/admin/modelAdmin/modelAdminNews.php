@@ -43,4 +43,62 @@ class modelAdminNews
         }
         return $test;
     }
+
+    public static function getNewsDetail($id) {
+        $query = "SELECT news.*, categoria.Name, users.username FROM news, categoria, users WHERE news.Category_id=categoria.id 
+        AND news.User_id=users.id AND news.id=".$id;
+        $db = new Database();
+        $arr = $db->getOne($query);
+        return $arr;
+    }
+
+    public static function getNewsEdit($id) {
+        $test = false;
+        if(isset($_POST['save'])) {
+            if(isset($_POST['Title']) && isset($_POST['Description']) && isset($_POST['Category_id'])) {
+                $title = $_POST['Title'];
+                $descr = $_POST['Description'];
+                $cat_id = $_POST['Category_id'];
+
+                //$date = Date("Y-m-d");
+
+                $image = $_FILES['picture']['name'];
+
+                if($image!=""){
+                    $uploaddir = '../image/';
+                    $uploadfile = $uploaddir . basename($_FILES['picture']['name']);
+                    copy($_FILES['picture']['tmp_name'], $uploadfile);
+                }
+
+                if($image=="") {
+                    $sql="UPDATE `news` SET `Title` = '$title',`Category_id` = '$cat_id', 
+                        `Description` = '$descr',  WHERE `news`.`id`=".$id;
+                }
+
+                else{
+                    $sql ="UPDATE `news` SET `Title` = '$title', `Category_id` = '$cat_id',
+                    `picture` = '$image',`Description` = '$descr', WHERE `news`.`id`=".$id;
+                }
+                $db = new Database();
+                $item = $db->executeRun($sql);
+                if($item==true) {
+                    $test = true;
+                }
+            }
+        }
+        return $test;
+    }
+
+    public static function getNewsDelete($id) {
+        $test = false;
+        if(isset($_POST['save'])) {
+            $sql = "DELETE FROM news WHERE news.id = ".$id;
+            $db = new Database();
+            $item = $db->executeRun($sql);
+            if($item==true) {
+                $test=true;
+            }
+        }
+        return $test;
+    }
 }
